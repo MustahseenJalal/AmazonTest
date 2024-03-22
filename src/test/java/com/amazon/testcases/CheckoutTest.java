@@ -29,7 +29,6 @@ public class CheckoutTest extends TestBase{
 	@BeforeMethod
 	public void setUp() throws InterruptedException {
 		initialization();
-	//	testUtil = new TestUtil();
 		resultPage = new ResultPage();
 		homePage = new HomePage();
 		searchPage = homePage.SearchProduct(prop.getProperty("product"));
@@ -40,7 +39,7 @@ public class CheckoutTest extends TestBase{
 	
 	
 	@Test
-	public void addToCartLoginTest() {
+	public void addToCartLoginTest() throws InterruptedException {
 		signInPage = resultPage.addToShoppingCart();
 		signInPage.signIn(prop.getProperty("username"), prop.getProperty("password"));
 	}

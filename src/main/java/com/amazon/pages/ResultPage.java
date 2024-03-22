@@ -11,10 +11,8 @@ import com.amazon.base.TestBase;
 
 public class ResultPage extends TestBase{
 
-	//@FindBy(xpath="(//span[@id='attach-sidesheet-checkout-button']//input)[1]")
-	//WebElement checkout;
 	
-	public SignInPage addToShoppingCart() {
+	public SignInPage addToShoppingCart() throws InterruptedException {
 
 		String parent=driver.getWindowHandle();
         Set<String>s=driver.getWindowHandles();
@@ -28,14 +26,12 @@ public class ResultPage extends TestBase{
         driver.switchTo().window(child_window);
     
         driver.findElement(By.xpath("(//input[@id='add-to-cart-button'])[2]")).click();
-       // driver.switchTo().frame("iframeName");
-        //driver.findElement(By.xpath("//span[@id='attach-sidesheet-checkout-button']//input")).click();
-        
-        driver.findElement(By.xpath("(//span[@id='attach-sidesheet-checkout-button']//input)[1]")).click();
-      // checkout.click();
-       // driver.findElement(By.xpath("//input[@name='proceedToRetailCheckout']")).click();
+        Thread.sleep(10000);
+        driver.findElement(By.xpath("//div[@id='attach-desktop-sideSheet']//div[@id='attach-accessory-pane']//span[@id='attach-sidesheet-checkout-button']//input[@class='a-button-input']")).click();
+    
+        Thread.sleep(10000);
 
-        
+       
         }
 
         }

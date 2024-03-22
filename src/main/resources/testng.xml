@@ -8,9 +8,9 @@
 
 	<test name="Amazon Test Cases">
 		<classes>
-		<!--	<class name="com.amazon.testcases.HomePageTest"></class>
+			<class name="com.amazon.testcases.HomePageTest"></class>
 			<class name="com.amazon.testcases.SearchPageTest"></class>
-		-->	<class name="com.amazon.testcases.CheckoutTest"></class>
+			<class name="com.amazon.testcases.CheckoutTest"></class>
 
 		</classes>
 	</test>
